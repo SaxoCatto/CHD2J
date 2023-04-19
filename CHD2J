@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    long long X, Y, Z, min;
+    char C;
+    while (scanf("%lld %lld %lld %c", &X, &Y, &Z, &C) != EOF)
+    {
+        if(C=='A')
+        {
+            printf ("4\n");
+        }
+        else
+        {
+            min = X;
+            if (min > Y) {min = Y;}
+            if (min > Z) {min = Z;}
+            printf("%lld\n",X + Y + Z - min + 2);
+        }
+    }
+    return 0;
+}
